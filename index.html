@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Crystal Game</title>
+    <title>Space Travel</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- jquery and javascript links -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -22,14 +22,14 @@
         <!-- header -->
         <div class="row">
             <div class="col-12 col-md-12">
-                <h1>Crystal Game</h1>
+                <h1>Space travel game!</h1>
             </div>
 
         </div>
         <!-- directions -->
         <div class="row">
             <div class="col-12 col-md-12">
-                <p>directions for game</p>
+                <p>Welcome to Space!  You must choose the correct ship to reach your destination.  If you go past your destination then you lose!  If you reach your destination exactly then you win! </p>
             </div>
         </div>
 
@@ -37,37 +37,42 @@
         <div class="row">
             <!-- Computer number -->
             <div clas="col-12 col-md-8">
-
+                <h3>Your destination is <span id="computerNumber"></span> lightyears away!</h3>
+                
             </div>
             <!-- win/loss board -->
             <div class="col-12 col-md-4">
-
+                <h4>Wins: <span id="wins"></span></h4>
+                <br>
+                <h4>Losses: <span id="losses"></span></h4>
             </div>
         </div>
         <!-- Crystal images -->
         <div class="row">
                 <!-- 1st crystal image -->
             <div class="col-12 col-md-4">
-                <img>
+                <img id="theFalcon" src="assets/images/Millenium_Falcon.jpg">
             </div>
             <!-- 2nd crystal image -->
             <div class="col-12 col-md-4">
-
+                <img id="RicksShip" src="assets/images/Ricks_ship.png">
             </div>
             <!-- 3rd crystal image -->
             <div class="col-12 col-md-4">
-
+                <img id="Serenity" src="assets/images/Serenity.jpg">
             </div>
             <!-- 4th crystal image -->
             <div class="col-12 col-md-4">
-
+                <img id "Tardis" src="assets/images/TARDIS.jpg">
             </div>
 
         </div>
         <!-- Your current score -->
         <div class="row">
             <div class="col-12 col-md-12">
-
+                <h3>Your Distance Is: </h3>
+                <br>
+                <h3><span id="userNumber"></span></h3>
             </div>
         </div>
 
