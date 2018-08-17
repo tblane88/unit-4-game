@@ -79,6 +79,7 @@ $(document).ready(function() {
         wins++;
         $("#wins").text(wins);
         initializeGame();
+        checkWins();
 
 
 
@@ -89,5 +90,12 @@ $(document).ready(function() {
 
     }
 
+    };
+    
+    function checkWins() {
+        if (wins === 2){
+
+            $(location).attr('href', 'http://stackoverflow.com');
+        };
     };
 });

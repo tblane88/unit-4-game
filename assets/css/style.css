@@ -1,5 +1,70 @@
+
 img {
     width: 150px;
     height: 150px;
     margin: 15px;
 }
+h1 {
+    text-align: center;
+    font-size: 60px;
+
+}
+h3 {
+    margin: 15px;
+}
+p {
+    font-size: 20px;
+}
+body {
+    background-image: url("../images/stars.jpg");
+    font-family: 'Do Hyeon', sans-serif;
+    
+
+}
+#page {
+    background-color: black;
+    background: rgba(0,0,0,0);
+}
+#title {
+    background-color: white;
+    background: rgba(0,0,0,0);
+    color: white;
+    margin: 15px;
+    opacity: 1;
+}
+#directions{
+    background-color: white;
+    border-radius: 5px;
+    margin: 15px;
+    opacity: 1;
+}
+
+#computerGuess {
+    background-color: #46464b;
+    color: white;
+    border-radius: 5px;
+    margin: 15px;
+    opacity: 1;
+}
+#winLoss {
+    background-color: #6c6c70;
+    color: white;
+    border-radius: 5px;
+    margin: 15px;
+    text-align: center;
+    opacity: 1;
+}
+#images {
+    background-color: #cc2b2b;
+    border-radius: 5px;
+    margin: 15px;
+    opacity: 1;
+}
+#userGuess {
+    background-color: #49617e;
+    border-radius: 5px;
+    margin: 15px;
+    opacity: 1;
+    color: white;
+}
+
