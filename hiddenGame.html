@@ -17,6 +17,209 @@
      <link rel="stylesheet" href="assets/css/hiddengame.css">
 </head>
 <body>
+   <div class="container">
+        <div class="row">
+            <!-- title -->
+            <div class="col-md-12">
+                <h1>Bonus RPG Game!</h1>
+            </div>
+        </div>
+
+
+        <div class="row">
+            <!-- hero images -->
+            <div class="col-md-3" id="HanHero">
+                <div class="heroImage">
+                    <div class="top-text">
+                        <p>Han Solo</p>
+                    </div>
+                    <img  src="assets/images/han.jpg">
+                    <div class="bottom-text">
+                        <p><span id="HanHeroScore">120</span></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3" id="RickHero">
+                    <div class="heroImage">
+                        <div class="top-text">
+                            <p>Rick Sanchez</p>
+                        </div>
+                        <img src="assets/images/rick-sanchez.jpg">
+                        <div class="bottom-text">
+                            <p><span id="RickHeroScore">100</span></p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-3" id="MalcolmHero">
+                        <div class="heroImage">
+                            <div class="top-text">
+                                <p>Captain Mal Reynolds</p>
+                            </div>
+                            <img src="assets/images/Malcolm-Reynolds.jpg">
+                            <div class="bottom-text">
+                                <p><span id="MalcolmHeroScore">150</span></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3" id="DoctorHero">
+                            <div class="heroImage">
+                                <div class="top-text">
+                                    <p>The Doctor</p>
+                                </div>
+                                <img src="assets/images/Doctor.jpg">
+                                <div class="bottom-text">
+                                    <p><span id="DoctorHeroScore">180</span></p>
+                                </div>
+                            </div>
+                        </div>
+
+        </div>
+
+
+        <div class="row">
+
+            <div class="col-md-12">
+                <h3>Choose Your Hero!</h3>
+            </div>
+        </div>
+
+        <div class="row">
+                <!-- opponent images -->
+                <div class="col-md-3 hidden" id="HanOpponent">
+                    <div class="opponentImage">
+                        <div class="top-text">
+                            <p>Han Solo</p>
+                        </div>
+                        <img src="assets/images/han.jpg">
+                        <div class="bottom-text">
+                            <p>120</p>
+                        </div>
+                    </div>
+                </div>
     
+                <div class="col-md-3 hidden" id="RickOpponent">
+                        <div class="opponentImage">
+                            <div class="top-text">
+                                <p>Rick Sanchez</p>
+                            </div>
+                            <img src="assets/images/rick-sanchez.jpg">
+                            <div class="bottom-text">
+                                <p>100</p>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="col-md-3 hidden" id="MalcolmOpponent">
+                            <div class="opponentImage">
+                                <div class="top-text">
+                                    <p>Captain Mal Reynolds</p>
+                                </div>
+                                <img src="assets/images/Malcolm-Reynolds.jpg">
+                                <div class="bottom-text">
+                                    <p>150</p>
+                                </div>
+                            </div>
+                        </div>
+    
+                        <div class="col-md-3 hidden" id="DoctorOpponent">
+                                <div class="opponentImage">
+                                    <div class="top-text">
+                                        <p>The Doctor</p>
+                                    </div>
+                                    <img src="assets/images/Doctor.jpg">
+                                    <div class="bottom-text">
+                                        <p>180</p>
+                                    </div>
+                                </div>
+                            </div>
+    
+            </div>
+
+            <div class="row">
+                <div class="col-md-12">
+                    <h3>Choose Your Opponent!</h3>
+                </div>
+            </div>
+            
+
+            <div class="row">
+                <div class="col-md-12">
+                    <h4>Fight Section</h4>
+                    <button type="button" id="attack">Attack</button>
+                </div>
+            </div>
+
+
+            <div class="row">
+                <div class="col-md-12">
+                    <h4>Defender</h4>
+                </div>
+            </div>
+
+
+            <div class="row">
+                 <!-- defender images -->
+                 <div class="col-md-3 hidden"  id="HanDefender">
+                        <div class="defenderImage">
+                            <div class="top-text">
+                                <p>Han Solo</p>
+                            </div>
+                            <img src="assets/images/han.jpg">
+                            <div class="bottom-text">
+                                <p><span id="HanDefenderScore">120</span></p>
+                            </div>
+                        </div>
+                    </div>
+        
+                    <div class="col-md-3 hidden" id="RickDefender">
+                            <div class="defenderImage">
+                                <div class="top-text">
+                                    <p>Rick Sanchez</p>
+                                </div>
+                                <img src="assets/images/rick-sanchez.jpg">
+                                <div class="bottom-text">
+                                    <p><span id="RickDefenderScore">100</span></p>
+                                </div>
+                            </div>
+                        </div>
+        
+                        <div class="col-md-3 hidden" id="MalcolmDefender">
+                                <div class="defenderImage">
+                                    <div class="top-text">
+                                        <p>Captain Mal Reynolds</p>
+                                    </div>
+                                    <img src="assets/images/Malcolm-Reynolds.jpg">
+                                    <div class="bottom-text">
+                                        <p><span id="MalcolmDefenderScore">150</span></p>
+                                    </div>
+                                </div>
+                            </div>
+        
+                            <div class="col-md-3 hidden" id="DoctorDefender">
+                                    <div class="defenderImage">
+                                        <div class="top-text">
+                                            <p>The Doctor</p>
+                                        </div>
+                                        <img src="assets/images/Doctor.jpg">
+                                        <div class="bottom-text">
+                                            <p><span id="DoctorDefenderScore">180</span></p>
+                                        </div>
+                                    </div>
+                                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-12">
+                    <div id="fightText" class="hidden">
+                        <p>You attacked <span class="currentOpponent"></span> for <span id="heroDamage"></span></p>
+                        <p><span class="currentOpponent"></span> attacked you back for <span id="enemyDamage"></span> damage.</p>
+                    </div>
+                </div>
+            </div>
+
+   </div> 
 </body>
 </html>
