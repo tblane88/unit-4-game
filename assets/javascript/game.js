@@ -93,9 +93,9 @@ $(document).ready(function() {
     };
     
     function checkWins() {
-        if (wins === 2){
+        if (wins === 5){
 
-            $(location).attr('href', 'http://stackoverflow.com');
+            $(location).attr('href', 'hiddenGame.html');
         };
     };
 });

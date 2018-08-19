@@ -9,8 +9,37 @@ $(document).ready(function() {
     var heroAttack = 0;
     var defenderAttack = 0;
     var defenderID = "";
+    var defenderAmt = 0;
+    var addScore = 0;
+
+    function reset() {
+        $("#HanHero").removeClass("hidden");
+        $("#RickHero").removeClass("hidden");
+        $("#MalcolmHero").removeClass("hidden");
+        $("#DoctorHero").removeClass("hidden");
+
+        $("#HanOpponent").addClass("hidden");
+        $("#RickOpponent").addClass("hidden");
+        $("#MalcolmOpponent").addClass("hidden");
+        $("#DoctorOpponent").addClass("hidden");
+
+        $(defenderID).addClass("hidden");
+
+        $("#HanScore").text("120");
+        $("#RickScore").text("100");
+        $("#MalcolmScore").text("150");
+        $("#DoctorScore").text("180");
+
+        $("#fightText").empty();
+
+        defenderAmt = 0;
+
+        heroPicked = false;
+        opponentPicked = false;
 
 
+
+    }
 
 
 
@@ -32,6 +61,7 @@ $(document).ready(function() {
             hero = "Han Solo";
             heroScore = 120;
             heroAttack = 8;
+            addScore = heroAttack;
             
             heroPicked = true;
        };
@@ -53,6 +83,8 @@ $(document).ready(function() {
             hero = "Rick Sanchez";
             heroScore = 100;
             heroAttack = 10;
+            addScore = heroAttack;
+
 
             heroPicked = true;
 
@@ -76,6 +108,8 @@ $(document).ready(function() {
             hero = "Captain Mal Reynolds";
             heroScore = 150;
             heroAttack = 6;
+            addScore = heroAttack;
+
 
             heroPicked = true;
 
@@ -99,6 +133,8 @@ $(document).ready(function() {
             hero = "The Doctor";
             heroScore = 180;
             heroAttack = 7;
+            addScore = heroAttack;
+
 
             heroPicked = true;
 
@@ -120,6 +156,11 @@ $(document).ready(function() {
             defenderAttack = 8;
 
             opponentPicked = true;
+            $("#fightText").empty();
+            defenderAmt++;
+            $(".defenderScore").text(defenderScore);
+
+
         };
    });
 
@@ -135,6 +176,12 @@ $(document).ready(function() {
             defenderAttack = 5;
 
             opponentPicked = true;
+            $("#fightText").empty();
+            defenderAmt++;
+            $(".defenderScore").text(defenderScore);
+
+
+
         };
 
     });
@@ -148,9 +195,15 @@ $(document).ready(function() {
             defender = "Captain Mal Reynolds";
             defenderScore = 150;
             defenderID = "#MalcolmDefender";
-            defenderAttack = 15;
+            defenderAttack = 12;
 
             opponentPicked = true;
+            $("#fightText").empty();
+            defenderAmt++;
+            $(".defenderScore").text(defenderScore);
+
+
+
         };
 
    });
@@ -164,26 +217,94 @@ $(document).ready(function() {
             defender = "The Doctor";
             defenderScore = 180;
             defenderID = "#DoctorDefender";
-            defenderAttack = 20;
+            defenderAttack = 15;
 
             opponentPicked = true;
+            $("#fightText").empty();
+            defenderAmt++;
+            $(".defenderScore").text(defenderScore);
+
         };
         
 
     });
 
 
-
+        // Attack Button click function
     $("#attack").on("click", function() {
-        if ((heroPicked) && (opponentPicked)) {
-            $(defenderID).addClass("hidden");
 
-        };
+        // check to see a hero has been picked
+        if (heroPicked) {
+            // check to see if an opponent has been picked
+            if(opponentPicked) {
 
+                if ((heroScore > 0) && (defenderScore > 0)) {
+                        $("#fightText").html("<h4>You attacked " + defender + " for " + heroAttack + " damage.</h4>  <h4>" + defender + " attacked you back for " + defenderAttack + " damage.</h4>");
+                        defenderScore = defenderScore - heroAttack;
+                        heroScore = heroScore - defenderAttack;
+                        $(".heroScore").text(heroScore);
+                        $(".defenderScore").text(defenderScore);
+                        heroAttack = heroAttack + addScore;
+
+                        if (heroScore <= 0){
+
+                            $("#fightText").html("<h4>GAME OVER! Sorry You lose!</h4> <button id='reset'>Reset Game</button>");
+        
+                        } else if (defenderScore <= 0) {
+        
+                            if (defenderAmt < 3) {
+        
+                                $(defenderID).addClass("hidden");
+                                $("#fightText").html("<h4>You have defeated " + defender + "! Choose another opponent</h4>");
+                                opponentPicked = false;
+        
+                            } else {
+        
+                                $("#fightText").html("<h4>You have Defeated everyone!!</h4> <button id='reset'>Reset Game</button>");
+                                
+        
+                            }
+                        }
+
+                } else if (heroScore <= 0){
+
+                    $("#fightText").html("<h4>GAME OVER! Sorry You lose!</h4> <button id='reset'>Reset Game</button>");
+
+                } else if (defenderScore <= 0) {
+
+                    if (defenderAmt < 3) {
+
+                        $(defenderID).addClass("hidden");
+                        $("#fightText").html("<h4>You have defeated " + defender + "! Choose another opponent</h4>");
+                        opponentPicked = false;
+
+                    } else {
+
+                        $("#fightText").html("<h4>You have Defeated everyone!!</h4> <button id='reset'>Reset Game</button>");
+                        
+
+                    }
+                }
+
+
+            } else {
+                $("#fightText").html("<h4>You need to choose an opponent!</h4>");
+            }
+            
+        } else {
+
+            $("#fightText").html("<h4>You need to choose a Hero!</h4>");
+        }
+
+         // Reset Function
+        $("#reset").on("click", function(){
+            reset();
+
+        });
 
     });
 
-
+   
 
 });
 
